@@ -1,4 +1,5 @@
 
+import java.util.Arrays;
 public class RemoveAllCharacter {
     /**
      * Return a String that has all the character of a String removed.
@@ -12,6 +13,13 @@ public class RemoveAllCharacter {
      * @return str, without any characters of type ch.
      */
     public String removeAll(String str, String ch){
-        return null;
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++){
+            if(!String.valueOf(str.charAt(i)).equals(ch)){
+                result.append(str.charAt(i));
+            } ;
+        } 
+        return result.toString();
     }
 }
